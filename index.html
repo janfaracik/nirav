@@ -90,7 +90,7 @@
 
     .hero {
       position: relative;
-      min-height: 65vh;
+      min-height: 60vh;
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
@@ -140,7 +140,11 @@
     }
 
     @keyframes hero-parallax {
-      to { transform: translateY(40%); }
+      from { filter: hue-rotate(0deg); }
+      to {
+        transform: translateY(85%);
+        filter: hue-rotate(-180deg);
+      }
     }
 
     .hero-content {
