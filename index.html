@@ -58,6 +58,11 @@
       color: var(--ink);
     }
 
+    .logo {
+      color: inherit;
+      display: block;
+    }
+
     .logo svg {
       height: 32px;
       width: auto;
@@ -184,7 +189,7 @@
     }
 
     .section-head {
-      padding: 4.5rem 2rem 0;
+      padding: 3rem 2rem 0;
     }
 
     .section-head h2 {
@@ -330,9 +335,9 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
   <header>
-    <div class="logo">
+    <a class="logo" href="#top" aria-label="Back to top">
       <svg viewBox="4 8 132 120" role="img" aria-label="Tashvi Collective" xmlns="http://www.w3.org/2000/svg">
         <g fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
           <!-- body, rump, legs -->
@@ -359,7 +364,7 @@
         <!-- cap -->
         <path d="M 74 26 C 88 12, 108 14, 118 28 C 106 22, 88 22, 78 32 C 75 30, 74 28, 74 26 Z" fill="currentColor"/>
       </svg>
-    </div>
+    </a>
     <nav class="nav-links">
       <a href="#bags">Bags</a>
       <a href="#home">Bath &amp; Home</a>
