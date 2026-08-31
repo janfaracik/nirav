@@ -56,8 +56,6 @@
       justify-content: space-between;
       padding: 1.25rem var(--gutter);
       background: color-mix(in srgb, var(--card) 90%, transparent);
-      -webkit-backdrop-filter: blur(12px) saturate(1.8);
-      backdrop-filter: blur(12px) saturate(1.8);
       position: fixed;
       top: 0;
       left: 0;
@@ -136,8 +134,7 @@
     @supports (animation-timeline: scroll()) {
       header {
         background: transparent;
-        -webkit-backdrop-filter: blur(0px) saturate(1);
-        backdrop-filter: blur(0px) saturate(1);
+        backdrop-filter: blur(0px);
         color: #fff;
         animation: nav-solidify linear both;
         animation-timeline: scroll();
@@ -154,8 +151,7 @@
     @keyframes nav-solidify {
       to {
         background: color-mix(in srgb, var(--card) 90%, transparent);
-        -webkit-backdrop-filter: blur(12px) saturate(1.8);
-        backdrop-filter: blur(12px) saturate(1.8);
+        backdrop-filter: blur(12px);
         color: var(--ink);
       }
     }
