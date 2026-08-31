@@ -19,6 +19,11 @@
       --accent: #1c1a17;
       --border: #e6e2db;
       --serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      --gutter: 2rem;
+    }
+
+    @media (min-width: 1024px) {
+      :root { --gutter: 4rem; }
     }
 
     @media (prefers-color-scheme: dark) {
@@ -47,7 +52,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.25rem 2rem;
+      padding: 1.25rem var(--gutter);
       background: color-mix(in srgb, var(--card) 90%, transparent);
       -webkit-backdrop-filter: blur(12px) saturate(1.8);
       backdrop-filter: blur(12px) saturate(1.8);
@@ -109,7 +114,7 @@
       align-items: flex-end;
       justify-content: flex-start;
       text-align: left;
-      padding: 5rem 2rem 3rem;
+      padding: 5rem var(--gutter) 3rem;
       overflow: hidden;
     }
 
@@ -188,7 +193,7 @@
     }
 
     .section-head {
-      padding: 3rem 2rem 0;
+      padding: 3rem var(--gutter) 0;
     }
 
     .section-head h2 {
@@ -206,7 +211,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 3.5rem 2rem;
-      padding: 2.5rem 2rem 3rem;
+      padding: 2.5rem var(--gutter) 3rem;
     }
 
 .product {
@@ -220,6 +225,8 @@
       aspect-ratio: 1 / 1;
       object-fit: cover;
       display: block;
+      outline: 1px solid rgba(0, 0, 0, 0.05);
+      outline-offset: -1px;
     }
 
     .product .info {
@@ -259,8 +266,8 @@
     }
 
     .story-inner {
-      padding: 4.5rem 3rem;
-      max-width: 40rem;
+      padding: 4.5rem var(--gutter);
+      max-width: 42rem;
     }
 
     @media (max-width: 900px) {
@@ -300,7 +307,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2.5rem;
-      padding: 3.5rem 2rem;
+      padding: 3.5rem var(--gutter);
     }
 
     .footer-cols h3 {
@@ -328,7 +335,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 0.5rem;
-      padding: 1.5rem 2rem;
+      padding: 1.5rem var(--gutter);
       color: var(--muted);
       font-size: 0.8rem;
     }
