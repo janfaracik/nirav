@@ -11,6 +11,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
+      color-scheme: light dark;
       --bg: #ffffff;
       --card: #ffffff;
       --ink: #1c1a17;
@@ -20,8 +21,20 @@
       --serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     }
 
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #000000;
+        --ink: #f2efea;
+        --muted: #a49e95;
+        --accent: #f2efea;
+        --border: #262626;
+      }
+    }
+
     h1, h2 { text-wrap: balance; }
     p { text-wrap: pretty; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Karla', -apple-system, 'Helvetica Neue', Arial, sans-serif;
@@ -61,6 +74,24 @@
     }
 
     .insta svg { display: block; }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .nav-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+    }
 
     .hero {
       position: relative;
@@ -133,7 +164,7 @@
 
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
       font-weight: 700;
       margin-bottom: 2.5rem;
       text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
@@ -148,14 +179,33 @@
       text-box: trim-both cap alphabetic;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 3.5rem 2rem;
-      padding: 3rem 2rem 5rem;
+    .collection {
+      scroll-margin-top: 5rem;
     }
 
-    .product {
+    .section-head {
+      padding: 4.5rem 2rem 0;
+    }
+
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: normal;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 3.5rem 2rem;
+      padding: 2.5rem 2rem 3rem;
+    }
+
+.product {
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -189,12 +239,30 @@
     .story {
       background: var(--card);
       border-top: 1px solid var(--border);
-      padding: 4rem 2rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .story-flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+    }
+
+    .story-flex > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .story-inner {
-      max-width: 42rem;
-      margin: 0 auto;
+      padding: 4.5rem 3rem;
+      max-width: 40rem;
+    }
+
+    @media (max-width: 900px) {
+      .story-flex { grid-template-columns: 1fr; }
+      .story-flex > img { max-height: 55vh; }
+      .story-inner { padding: 3rem 2rem; }
     }
 
     .story h2 {
@@ -220,14 +288,47 @@
     }
 
     footer {
-      text-align: center;
-      padding: 2.5rem 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
       border-top: 1px solid var(--border);
+      font-size: 0.9rem;
     }
 
-    footer a { color: var(--ink); }
+    .footer-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2.5rem;
+      padding: 3.5rem 2rem;
+    }
+
+    .footer-cols h3 {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-cols p {
+      color: var(--muted);
+      line-height: 1.9;
+    }
+
+    footer a {
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 1.5rem 2rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
   </style>
 </head>
 <body>
@@ -260,6 +361,12 @@
         <path d="M 74 26 C 88 12, 108 14, 118 28 C 106 22, 88 22, 78 32 C 75 30, 74 28, 74 26 Z" fill="currentColor"/>
       </svg>
     </div>
+    <nav class="nav-links">
+      <a href="#bags">Bags</a>
+      <a href="#home">Bath &amp; Home</a>
+      <a href="#clothing">Clothing</a>
+      <a href="#story">Our Story</a>
+    </nav>
     <a class="insta" href="https://www.instagram.com/tashvicollective/" aria-label="Tashvi Collective on Instagram">
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" xmlns="http://www.w3.org/2000/svg">
         <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
@@ -277,7 +384,13 @@
     </div>
   </section>
 
-  <main class="grid">
+  <main>
+    <section class="collection" id="bags">
+      <div class="section-head">
+        <h2>Bags &amp; Accessories</h2>
+        <p>Quilted totes, slings and sleeves, hand-block-printed in small batches.</p>
+      </div>
+      <div class="grid">
     <article class="product">
       <img src="images/pouch-set.jpg" alt="3 Pouch Set" loading="lazy">
       <div class="info">
@@ -389,7 +502,15 @@
         <p class="desc">A charming and practical pouch for keeping pens, pencils, stationery and small essentials neatly organised. Compact enough to carry anywhere.</p>
       </div>
     </article>
+      </div>
+    </section>
 
+    <section class="collection" id="home">
+      <div class="section-head">
+        <h2>Bath &amp; Home</h2>
+        <p>Robes, towels and table linen in soft, breathable cotton.</p>
+      </div>
+      <div class="grid">
     <article class="product">
       <img src="images/bath-robe.jpg" alt="Bath Robe" loading="lazy">
       <div class="info">
@@ -445,7 +566,15 @@
         <p class="desc">A natural jute dining set featuring a table cover with matching napkins. Its earthy texture adds warmth and a relaxed, rustic elegance to your dining table.</p>
       </div>
     </article>
+      </div>
+    </section>
 
+    <section class="collection" id="clothing">
+      <div class="section-head">
+        <h2>Clothing</h2>
+        <p>Easy silhouettes in breathable block-printed cotton.</p>
+      </div>
+      <div class="grid">
     <article class="product">
       <img src="images/cotton-dress.jpg" alt="Cotton Dress" loading="lazy">
       <div class="info">
@@ -470,6 +599,15 @@
       </div>
     </article>
 
+      </div>
+    </section>
+
+    <section class="collection" id="handicrafts">
+      <div class="section-head">
+        <h2>Handicrafts</h2>
+        <p>One-of-a-kind artisanal finds, made by hand the slow way.</p>
+      </div>
+      <div class="grid">
     <article class="product">
       <img src="images/handicrafts.jpg" alt="Handcrafted Treasures from India" loading="lazy">
       <div class="info">
@@ -477,10 +615,14 @@
         <p class="desc">Discover a curated collection of artisanal creations&mdash;wooden carvings, brass d&eacute;cor, traditional textiles and handcrafted accessories&mdash;each piece crafted with care by skilled Indian artisans. Our handicrafts celebrate heritage, detail and timeless craftsmanship, bringing warmth, culture and character into every home.</p>
       </div>
     </article>
+      </div>
+    </section>
   </main>
 
-  <section class="story">
-    <div class="story-inner">
+  <section class="story" id="story">
+    <div class="story-flex">
+      <img src="images/tote-m.jpg" alt="A quilted block-printed tote on an armchair">
+      <div class="story-inner">
       <h2>Our Story</h2>
       <p>Tashvi Collective was founded with a simple vision — to bring the timeless beauty of Indian craftsmanship into modern homes and wardrobes around the world.</p>
       <p>Based in London, Tashvi Collective combines traditional artisan techniques with contemporary designs to create thoughtfully crafted home and fashion products. Every collection celebrates India's rich textile heritage while offering products that are practical, elegant, and made to be cherished.</p>
@@ -488,12 +630,37 @@
       <p>Our collections include premium cotton clothing, bathrobes, bedsheets, table linens, handcrafted bags, and home décor, carefully sourced and created with attention to quality, sustainability, and timeless design.</p>
       <p>At Tashvi Collective, every purchase supports traditional craftsmanship, empowers artisan communities, and helps preserve generations-old techniques for the future.</p>
       <p class="signoff">Handcrafted with love. Made to be cherished.</p>
+      </div>
     </div>
   </section>
 
   <footer>
-    © 2026 Tashvi Collective · United Kingdom ·
-    <a href="https://www.instagram.com/tashvicollective/">@tashvicollective</a>
+    <div class="footer-cols">
+      <div>
+        <h3>Tashvi Collective</h3>
+        <p>Refined cotton. Timeless living. Hand-block-printed cottons and artisanal finds, brought to the UK with care.</p>
+      </div>
+      <div>
+        <h3>Explore</h3>
+        <p>
+          <a href="#bags">Bags &amp; Accessories</a><br>
+          <a href="#home">Bath &amp; Home</a><br>
+          <a href="#clothing">Clothing</a><br>
+          <a href="#story">Our Story</a>
+        </p>
+      </div>
+      <div>
+        <h3>Get in Touch</h3>
+        <p>
+          <a href="https://www.instagram.com/tashvicollective/">Instagram — @tashvicollective</a><br>
+          United Kingdom
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Tashvi Collective</span>
+      <span>Handcrafted with love. Made to be cherished.</span>
+    </div>
   </footer>
 </body>
 </html>
