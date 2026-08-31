@@ -61,7 +61,20 @@
 
     .logo {
       color: inherit;
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo span {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 0.7rem;
+      line-height: 1.5;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
     .logo svg {
@@ -349,6 +362,7 @@
         <!-- cap -->
         <path d="M 74 26 C 88 12, 108 14, 118 28 C 106 22, 88 22, 78 32 C 75 30, 74 28, 74 26 Z" fill="currentColor"/>
       </svg>
+      <span>Tashvi<br>Collective</span>
     </a>
     <nav class="nav-links">
       <a href="#bags">Bags</a>
