@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tashvi Collective</title>
+  <meta name="description" content="Curated essentials & artisanal finds. Hand-block-printed cottons and crafted pieces celebrating India's rich textile heritage. Based in London.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <meta property="og:title" content="Tashvi Collective">
+  <meta property="og:description" content="Refined cotton. Timeless living. Hand-block-printed cottons and artisanal finds celebrating India's rich textile heritage.">
+  <meta property="og:type" content="website">
+  <!-- og:image must be an absolute URL once the site has a domain -->
+  <meta property="og:image" content="images/tote-s.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -296,6 +303,43 @@
       margin-bottom: 0;
     }
 
+    .insta-band {
+      border-top: 1px solid var(--border);
+    }
+
+    .insta-head {
+      padding: 3rem var(--gutter) 2rem;
+    }
+
+    .insta-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: normal;
+    }
+
+    .insta-head p {
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .insta-head a { color: var(--ink); }
+
+    .insta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .insta-strip img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 700px) {
+      .insta-strip { grid-template-columns: repeat(2, 1fr); }
+    }
+
     footer {
       border-top: 1px solid var(--border);
       font-size: 0.9rem;
@@ -390,34 +434,10 @@
     </article>
 
     <article class="product">
-      <img src="images/tote-s.jpg" alt="Small Tote Bag" loading="lazy">
+      <img src="images/tote-s.jpg" alt="Quilted tote bags in four sizes" loading="lazy">
       <div class="info">
-        <h2>S Tote Bag</h2>
-        <p class="desc">A compact everyday tote designed for light essentials. Lightweight, practical and beautifully crafted in cotton, making it perfect for quick errands or everyday use.</p>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="images/tote-m.jpg" alt="Medium Tote Bag" loading="lazy">
-      <div class="info">
-        <h2>M Tote Bag</h2>
-        <p class="desc">A versatile medium-sized tote offering the perfect balance of style and space. Ideal for everyday shopping, work essentials and casual outings.</p>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="images/tote-l.jpg" alt="Large Tote Bag" loading="lazy">
-      <div class="info">
-        <h2>L Tote Bag</h2>
-        <p class="desc">A spacious everyday tote designed to carry all your essentials with ease. Perfect for shopping, work, travel or a day out.</p>
-      </div>
-    </article>
-
-    <article class="product">
-      <img src="images/tote-xl.jpg" alt="Extra Large Tote Bag" loading="lazy">
-      <div class="info">
-        <h2>XL Tote Bag</h2>
-        <p class="desc">Our extra-large tote offers generous space without compromising on style. Perfect for shopping, travel, beach days, work or carrying everything you need on the go.</p>
+        <h2>Quilted Tote</h2>
+        <p class="desc">Our signature quilted cotton tote, from a compact carrier for light essentials up to a generous size for shopping, travel and beach days. Available in four sizes: S, M, L and XL.</p>
       </div>
     </article>
 
@@ -613,6 +633,19 @@
       <p>At Tashvi Collective, every purchase supports traditional craftsmanship, empowers artisan communities, and helps preserve generations-old techniques for the future.</p>
       <p class="signoff">Handcrafted with love. Made to be cherished.</p>
       </div>
+    </div>
+  </section>
+
+  <section class="insta-band">
+    <div class="insta-head">
+      <h2>Follow along</h2>
+      <p><a href="https://www.instagram.com/tashvicollective/">@tashvicollective</a> for pop-ups, new arrivals and behind the scenes.</p>
+    </div>
+    <div class="insta-strip">
+      <a href="https://www.instagram.com/tashvicollective/"><img src="images/key-charms.jpg" alt="Fabric key charms" loading="lazy"></a>
+      <a href="https://www.instagram.com/tashvicollective/"><img src="images/pencil-pouch.jpg" alt="Block-printed pencil pouch" loading="lazy"></a>
+      <a href="https://www.instagram.com/tashvicollective/"><img src="images/kids-bathrobe.jpg" alt="Kids bathrobe" loading="lazy"></a>
+      <a href="https://www.instagram.com/tashvicollective/"><img src="images/table-runner.jpg" alt="Dining table runner" loading="lazy"></a>
     </div>
   </section>
 
