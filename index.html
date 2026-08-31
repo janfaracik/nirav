@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tashvi Collective</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #faf6f0;
+      --card: #ffffff;
+      --ink: #3d2f24;
+      --muted: #8a7a6b;
+      --accent: #b5622e;
+      --border: #ecdfd0;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--card);
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .logo .mark { font-size: 1.6rem; }
+    .logo span { color: var(--accent); }
+
+    .insta {
+      font-size: 0.95rem;
+      color: var(--accent);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 0.45rem 1.1rem;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4.5rem 1.5rem 3.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: normal;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 34rem;
+      margin: 0 auto;
+    }
+
+    .hero .origin {
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .product {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .product .info {
+      padding: 1.25rem 1.25rem 1.5rem;
+    }
+
+    .product h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .product .desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .story {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      padding: 4rem 1.5rem;
+    }
+
+    .story-inner {
+      max-width: 42rem;
+      margin: 0 auto;
+    }
+
+    .story h2 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: normal;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .story p {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .story .signoff {
+      text-align: center;
+      color: var(--accent);
+      font-style: italic;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span class="mark">🐘</span> Tashvi <span>Collective</span></div>
+    <a class="insta" href="https://www.instagram.com/tashvicollective/">Instagram</a>
+  </header>
+
+  <section class="hero">
+    <h1>Refined cotton. Timeless living.</h1>
+    <p>Curated essentials &amp; artisanal finds — hand-block-printed cottons and crafted pieces, brought to the UK with care.</p>
+    <div class="origin">United Kingdom</div>
+  </section>
+
+  <main class="grid">
+    <article class="product">
+      <img src="images/pouch-set.jpg" alt="3 Pouch Set" loading="lazy">
+      <div class="info">
+        <h2>3 Pouch Set</h2>
+        <p class="desc">A versatile set of three handcrafted cotton pouches, perfect for organising everyday essentials, cosmetics, stationery, travel accessories and more. Stylish, practical and easy to carry.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/key-charms.jpg" alt="Key Charms" loading="lazy">
+      <div class="info">
+        <h2>Key Charms</h2>
+        <p class="desc">Handcrafted fabric key charms that add a playful and colourful touch to your keys, bags or pouches. A lovely little accessory or gift.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/tote-s.jpg" alt="Small Tote Bag" loading="lazy">
+      <div class="info">
+        <h2>S Tote Bag</h2>
+        <p class="desc">A compact everyday tote designed for light essentials. Lightweight, practical and beautifully crafted in cotton, making it perfect for quick errands or everyday use.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/tote-m.jpg" alt="Medium Tote Bag" loading="lazy">
+      <div class="info">
+        <h2>M Tote Bag</h2>
+        <p class="desc">A versatile medium-sized tote offering the perfect balance of style and space. Ideal for everyday shopping, work essentials and casual outings.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/tote-l.jpg" alt="Large Tote Bag" loading="lazy">
+      <div class="info">
+        <h2>L Tote Bag</h2>
+        <p class="desc">A spacious everyday tote designed to carry all your essentials with ease. Perfect for shopping, work, travel or a day out.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/tote-xl.jpg" alt="Extra Large Tote Bag" loading="lazy">
+      <div class="info">
+        <h2>XL Tote Bag</h2>
+        <p class="desc">Our extra-large tote offers generous space without compromising on style. Perfect for shopping, travel, beach days, work or carrying everything you need on the go.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/duffle-bag.jpg" alt="Duffle Bag" loading="lazy">
+      <div class="info">
+        <h2>Duffle Bag</h2>
+        <p class="desc">A spacious and practical handcrafted duffle bag designed for weekends, short trips, gym visits and everyday travel. Easy to carry and roomy enough for your essentials.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/yoga-mat-bag.jpg" alt="Yoga Mat Bag" loading="lazy">
+      <div class="info">
+        <h2>Yoga Mat Bag</h2>
+        <p class="desc">A practical cotton yoga mat bag designed to carry your yoga mat comfortably while keeping your essentials organised. Lightweight, stylish and perfect for classes or travelling.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/ipad-sleeve.jpg" alt="iPad Sleeve" loading="lazy">
+      <div class="info">
+        <h2>iPad Sleeve</h2>
+        <p class="desc">A soft, padded sleeve designed to protect your iPad while keeping it stylishly covered. Lightweight and easy to slip into your tote or backpack.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/laptop-sleeve.jpg" alt="Laptop Sleeve" loading="lazy">
+      <div class="info">
+        <h2>Laptop Sleeve</h2>
+        <p class="desc">A protective padded sleeve designed to keep your laptop secure from everyday bumps and scratches. Stylish enough to carry on its own or inside a larger bag.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/laptop-bag.jpg" alt="Laptop Bag" loading="lazy">
+      <div class="info">
+        <h2>Laptop Bag</h2>
+        <p class="desc">A practical and stylish laptop bag designed for work, commuting and everyday use. Offers convenient space for your laptop and essential accessories.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/sling-bag.jpg" alt="Sling Bag" loading="lazy">
+      <div class="info">
+        <h2>Sling Bag</h2>
+        <p class="desc">A comfortable crossbody sling designed for hands-free convenience. Compact yet practical, it is perfect for carrying your everyday essentials while travelling or exploring.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/mobile-sling.jpg" alt="Mobile Sling" loading="lazy">
+      <div class="info">
+        <h2>Mobile Sling</h2>
+        <p class="desc">A compact hands-free sling designed specifically for carrying your mobile phone and small essentials. Perfect for travel, walks, shopping and everyday outings.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/pencil-pouch.jpg" alt="Pencil Pouch" loading="lazy">
+      <div class="info">
+        <h2>Pencil Pouch</h2>
+        <p class="desc">A charming and practical pouch for keeping pens, pencils, stationery and small essentials neatly organised. Compact enough to carry anywhere.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/bath-robe.jpg" alt="Bath Robe" loading="lazy">
+      <div class="info">
+        <h2>Bath Robe</h2>
+        <p class="desc">A soft and comfortable cotton bath robe designed for relaxed mornings, cosy evenings and post-bath comfort. Lightweight, breathable and perfect for everyday lounging.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/kids-bathrobe.jpg" alt="Kids Bathrobe" loading="lazy">
+      <div class="info">
+        <h2>Kids Bathrobe</h2>
+        <p class="desc">A soft, comfortable and easy-to-wear bath robe specially designed for little ones. Perfect after bath time, swimming or for cosy mornings at home.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/towels.jpg" alt="Towels" loading="lazy">
+      <div class="info">
+        <h2>Towels</h2>
+        <p class="desc">Soft, absorbent cotton towels designed for everyday comfort and practicality. Gentle on the skin and perfect for adding a touch of understated style to your bathroom.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/kids-towel.jpg" alt="Kids Towel" loading="lazy">
+      <div class="info">
+        <h2>Kids Towel</h2>
+        <p class="desc">Soft and gentle cotton towels made with little ones in mind. Comfortable, absorbent and perfect for bath time, swimming or everyday use.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/table-runner.jpg" alt="Dining Table Runner" loading="lazy">
+      <div class="info">
+        <h2>Dining Table Runner</h2>
+        <p class="desc">A beautifully crafted table runner designed to instantly elevate your dining table. Perfect for everyday meals, festive gatherings and special occasions.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/table-cover-cotton.jpg" alt="Cotton Dining Table Cover with Napkins" loading="lazy">
+      <div class="info">
+        <h2>Dining Table Cover with Napkins &ndash; Cotton</h2>
+        <p class="desc">A coordinated cotton dining set featuring a stylish table cover with matching napkins. Designed to bring warmth, elegance and an effortless handcrafted feel to your dining space.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/table-cover-jute.jpg" alt="Jute Dining Table Cover with Napkins" loading="lazy">
+      <div class="info">
+        <h2>Dining Table Cover with Napkins &ndash; Jute</h2>
+        <p class="desc">A natural jute dining set featuring a table cover with matching napkins. Its earthy texture adds warmth and a relaxed, rustic elegance to your dining table.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/cotton-dress.jpg" alt="Cotton Dress" loading="lazy">
+      <div class="info">
+        <h2>Cotton Dress</h2>
+        <p class="desc">A comfortable and effortlessly stylish cotton dress designed for everyday wear. Lightweight, breathable and easy to dress up or down for different occasions.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/mens-shirt.jpg" alt="Cotton Men's Shirt" loading="lazy">
+      <div class="info">
+        <h2>Cotton Men's Shirt</h2>
+        <p class="desc">A comfortable cotton shirt combining timeless style with everyday ease. Breathable, versatile and perfect for casual days, holidays or relaxed occasions.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/cotton-tops.jpg" alt="Cotton Tops" loading="lazy">
+      <div class="info">
+        <h2>Cotton Tops</h2>
+        <p class="desc">Comfortable and versatile cotton tops designed for effortless everyday dressing. Lightweight, breathable and easy to pair with your favourite trousers, jeans or skirts.</p>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="images/handicrafts.jpg" alt="Handcrafted Treasures from India" loading="lazy">
+      <div class="info">
+        <h2>Handcrafted Treasures from India</h2>
+        <p class="desc">Discover a curated collection of artisanal creations&mdash;wooden carvings, brass d&eacute;cor, traditional textiles and handcrafted accessories&mdash;each piece crafted with care by skilled Indian artisans. Our handicrafts celebrate heritage, detail and timeless craftsmanship, bringing warmth, culture and character into every home.</p>
+      </div>
+    </article>
+  </main>
+
+  <section class="story">
+    <div class="story-inner">
+      <h2>Our Story</h2>
+      <p>Tashvi Collective was founded with a simple vision — to bring the timeless beauty of Indian craftsmanship into modern homes and wardrobes around the world.</p>
+      <p>Based in London, Tashvi Collective combines traditional artisan techniques with contemporary designs to create thoughtfully crafted home and fashion products. Every collection celebrates India's rich textile heritage while offering products that are practical, elegant, and made to be cherished.</p>
+      <p>The company was founded by Neha Akash Kedia, originally from Jaipur, Rajasthan, who moved to London in 2016, and Neha Ashok Kurani, originally from Nagpur, Maharashtra, who moved to London in 2014. United by a shared passion for handcrafted textiles and ethical craftsmanship, they established Tashvi Collective to connect skilled Indian artisans with customers who appreciate authentic, high-quality handmade products.</p>
+      <p>Our collections include premium cotton clothing, bathrobes, bedsheets, table linens, handcrafted bags, and home décor, carefully sourced and created with attention to quality, sustainability, and timeless design.</p>
+      <p>At Tashvi Collective, every purchase supports traditional craftsmanship, empowers artisan communities, and helps preserve generations-old techniques for the future.</p>
+      <p class="signoff">Handcrafted with love. Made to be cherished.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Tashvi Collective · United Kingdom ·
+    <a href="https://www.instagram.com/tashvicollective/">@tashvicollective</a>
+  </footer>
+</body>
+</html>
