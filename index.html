@@ -6,24 +6,25 @@
   <title>Tashvi Collective</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #faf6f0;
+      --bg: #ffffff;
       --card: #ffffff;
-      --ink: #3d2f24;
-      --muted: #8a7a6b;
-      --accent: #b5622e;
-      --border: #ecdfd0;
+      --ink: #1c1a17;
+      --muted: #6f6a63;
+      --accent: #1c1a17;
+      --border: #e6e2db;
+      --serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
     }
 
     h1, h2 { text-wrap: balance; }
     p { text-wrap: pretty; }
 
     body {
-      font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      font-family: 'Karla', -apple-system, 'Helvetica Neue', Arial, sans-serif;
       background: var(--bg);
       color: var(--ink);
       line-height: 1.6;
@@ -41,7 +42,7 @@
       left: 0;
       right: 0;
       z-index: 20;
-      color: #6d3b1c;
+      color: var(--ink);
     }
 
     .logo svg {
@@ -63,7 +64,7 @@
 
     .hero {
       position: relative;
-      min-height: 90vh;
+      min-height: 85vh;
       display: flex;
       align-items: flex-end;
       justify-content: flex-start;
@@ -116,7 +117,7 @@
       to {
         background: var(--card);
         border-bottom-color: var(--border);
-        color: #6d3b1c;
+        color: var(--ink);
       }
     }
 
@@ -131,6 +132,7 @@
     }
 
     .hero h1 {
+      font-family: var(--serif);
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 700;
       margin-bottom: 2.5rem;
@@ -146,17 +148,14 @@
       text-box: trim-both cap alphabetic;
     }
 
-.grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 1.5rem;
-      padding: 1.5rem 2rem 4rem;
+      gap: 3.5rem 2rem;
+      padding: 3rem 2rem 5rem;
     }
 
     .product {
-      background: var(--card);
-      border: 1px solid var(--border);
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       text-align: left;
@@ -170,17 +169,21 @@
     }
 
     .product .info {
-      padding: 1.25rem 1.25rem 1.5rem;
+      padding: 1rem 0 0;
     }
 
     .product h2 {
-      font-size: 1.1rem;
-      margin-bottom: 0.35rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
     }
 
     .product .desc {
       color: var(--muted);
       font-size: 0.9rem;
+      line-height: 1.55;
     }
 
     .story {
@@ -195,6 +198,7 @@
     }
 
     .story h2 {
+      font-family: var(--serif);
       font-size: clamp(1.6rem, 4vw, 2.2rem);
       font-weight: normal;
       text-align: left;
@@ -208,7 +212,8 @@
 
     .story .signoff {
       text-align: left;
-      color: var(--accent);
+      font-family: var(--serif);
+      color: var(--muted);
       font-style: italic;
       margin-top: 2rem;
       margin-bottom: 0;
@@ -222,7 +227,7 @@
       border-top: 1px solid var(--border);
     }
 
-    footer a { color: var(--accent); }
+    footer a { color: var(--ink); }
   </style>
 </head>
 <body>
