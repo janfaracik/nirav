@@ -19,6 +19,9 @@
       --border: #ecdfd0;
     }
 
+    h1, h2 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+
     body {
       font-family: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
       background: var(--bg);
@@ -42,7 +45,7 @@
     }
 
     .logo svg {
-      height: 44px;
+      height: 32px;
       width: auto;
       display: block;
     }
@@ -60,12 +63,12 @@
 
     .hero {
       position: relative;
-      min-height: 70vh;
+      min-height: 90vh;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 5rem 1.5rem;
+      align-items: flex-end;
+      justify-content: flex-start;
+      text-align: left;
+      padding: 5rem 2rem 3rem;
       overflow: hidden;
     }
 
@@ -84,7 +87,7 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom,
-        rgba(250, 246, 240, 0.55) 0,
+        rgba(0, 0, 0, 0.55) 0,
         rgba(43, 28, 14, 0.2) 24%,
         rgba(43, 28, 14, 0.45) 55%);
     }
@@ -118,7 +121,7 @@
     }
 
     @keyframes hero-parallax {
-      to { transform: translateY(13%); }
+      to { transform: translateY(25%); }
     }
 
     .hero-content {
@@ -129,31 +132,25 @@
 
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: normal;
-      margin-bottom: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
       text-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+      text-box: trim-both cap alphabetic;
     }
 
     .hero p {
       color: rgba(255, 255, 255, 0.92);
       font-size: 1.1rem;
       max-width: 34rem;
-      margin: 0 auto;
       text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+      text-box: trim-both cap alphabetic;
     }
 
-    .hero .origin {
-      margin-top: 1.25rem;
-      font-size: 0.9rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .grid {
+.grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 1.5rem;
-      padding: 1.5rem 1.5rem 4rem;
+      padding: 1.5rem 2rem 4rem;
     }
 
     .product {
@@ -189,7 +186,7 @@
     .story {
       background: var(--card);
       border-top: 1px solid var(--border);
-      padding: 4rem 1.5rem;
+      padding: 4rem 2rem;
     }
 
     .story-inner {
@@ -219,7 +216,7 @@
 
     footer {
       text-align: center;
-      padding: 2.5rem 1.5rem;
+      padding: 2.5rem 2rem;
       color: var(--muted);
       font-size: 0.9rem;
       border-top: 1px solid var(--border);
@@ -272,7 +269,6 @@
     <div class="hero-content">
       <h1>Refined cotton. Timeless living.</h1>
       <p>Curated essentials &amp; artisanal finds — hand-block-printed cottons and crafted pieces, brought to the UK with care.</p>
-      <div class="origin">United Kingdom</div>
     </div>
   </section>
 
